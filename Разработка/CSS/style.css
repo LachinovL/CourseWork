@@ -1,1 +1,45 @@
 /*style*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.menu__main__table {
+    display: flex;
+    justify-content: space-around;
+    background: rgb(0, 0, 0);
+}
+
+.menu__main__table a {
+    color: white;
+    display: block;
+    
+    
+    font-family: "Open Sans";
+    font-size: 20px;
+}
+
+.menu__main__table .text {
+    padding: 1em;
+    margin: 0.2em;
+}
+
+.menu__main__table .logo {
+    padding: 0.6em;
+    margin: 0.2em;
+}
+
+
+.menu__main__table img {
+    width: 120px;
+    height: 40px;
+}

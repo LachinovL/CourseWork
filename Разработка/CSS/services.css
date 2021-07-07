@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@100&family=Montserrat:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+
+.menu__main__table {
+    display: flex;
+    justify-content: space-around;
+    background: rgb(0, 0, 0);
+}
+
+.menu__main__table a {
+    color: white;
+    display: block;
+    
+    
+    font-family: "Open Sans";
+    font-size: 1.2em;
+}
+
+.menu__main__table .text {
+    padding: 1em;
+    margin: 0.2em;
+}
+
+.menu__main__table .logo {
+    padding: 0.6em;
+    margin: 0.2em;
+}
+
+.menu__main__table img {
+    width: auto;
+    height: 2em;
+}
+
+.menu__main__table a:hover {
+    text-decoration:blue underline 3px;
+}
+
+
+
+
+.services {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.services__left {
+display: inline-block;
+flex: 0 65%;
+
+}
+
+.services__right {
+    background-color: rgba(0, 0, 0, 0.2);
+    flex: 0 35%;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+}
+
+.services__right h2 {
+    color: rgb(189, 11, 11);
+}
+
+.fitness-features { 
+    position: relative;
+    padding: 108px 20px 15px 30px;
+}
+
+.fitness-features__title {
+    font-size: 1.5em;
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+
+.fitness-features__first, .fitness-features__second, 
+.fitness-features__third {
+    font-size: 0.9em;
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+
+.fitness-programs {
+    padding-top: 3em;
+}
+
+.fitness-programs__title {
+    font-size: 2em;
+}
+
+.fitness-programs__list {
+    margin-top: 2em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.fitness-programs__first {
+    width: 32%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.fitness-programs__first_img {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+   
+}
+
+.fitness-programs__first img {
+    width: 100%;
+    height: 10em;
+}
+
+.fitness-programs__first__title {
+    font-size: 1.1em;
+    padding: 1em 1em;
+    color: rgb(189, 11, 11);
+}
+
+.fitness-programs__first__desc {
+    font-size: 0.8em;
+    line-height: 2em;
+    padding: 1em 2em;
+}
+
+
+
+footer {
+    background-color: black;
+ }
+ 
+ .footer__first-row, .footer__second-row,
+ .footer__third-row, .footer__fourth-row {
+     margin-bottom: 3em;
+     margin-top: 3em;
+     text-align: center;
+ }
+ 
+ .footer__first-row {
+     
+     flex: 0 0 25%;
+     margin-left: 5em;
+ }
+ 
+ .footer__first-row a, p {
+     font-size: 1em;
+ }
+ 
+ .footer__second-row {
+     flex: 0 0 20%;
+     line-height: 2em;
+ }
+ 
+ .footer__second-row a, p{
+     font-size: 1.5em;
+ }
+ 
+ .footer__third-row {
+     flex: 0 0 20%;
+     line-height: 2em;
+ }
+ 
+ .footer__third-row a, p{
+     font-size: 1.5em;
+ }
+ 
+ 
+ .footer__fourth-row {
+     font-size: 1em;
+     margin-right: 5em;
+     flex: 0 0 22%;
+ }
+ 
+ .footer__fourth-row a, p {
+     font-size: 1.1em;
+ }
+ 
+ footer p, a {
+     color:white;
+ }
+ 
+ .row {
+     display: flex;
+     
+ }
+ 
+ 
+ .footer__fourth-row__social {
+     display: flex;
+ }
+ 
+ 
+ .footer__fourth-row img {
+     margin-left: 10px;
+     width: 30px;
+     height: 30px;
+ }  

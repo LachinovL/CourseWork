@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+.disp_menu {
+    display: none;
+}
+
+
+@media (max-width: 1000px) {
+    .disp_menu {
+        display: inline;
+    }
+
+    .fade li {
+        color: black;
+    }
+
+    .disp_menu ul {
+    align-self: flex-start;
+    background-color: rgb(34, 0, 0);
+    width:100%;
+    }
+
+    .disp_menu li {
+        align-items: center;
+        color: black;
+        cursor: pointer;
+        display: flex;
+        font-size: 1.5em;
+        height: 2em;
+        justify-content: center;
+         list-style-type: none;
+         text-transform: uppercase;
+         transition: all .3s easy ;
+    }
+    
+    .disp_menu li:hover {
+        border-color: #2e0202;
+        color: #003b2c;
+        
+    }
+    
+    #app {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    } 
+        .disp_menu ul {
+        align-self: flex-start;
+        background-color: black;
+        width:100%;
+    }
+}

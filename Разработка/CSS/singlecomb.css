@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@100&family=Montserrat:wght@300&display=swap');
-@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
 * {
     margin: 0;
     padding: 0;
@@ -51,43 +51,65 @@ a {
 
 
 
-.contacts {
-    padding-top: 3em;
+.services {
     font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    display: flex;
+    flex-wrap: wrap;
     margin: 0 auto;
     width: 90%;
 }
 
-.contacts__list {
+.services__left {
+    display: inline-block;
+    margin-right: 1em;
+    }
+
+
+.fitness-programs {
+    padding-top: 3em;
+}
+
+.fitness-programs__title {
+    font-size: 2em;
+}
+
+.fitness-programs__list {
+    justify-content: space-between;
+    margin-top: 2em;
     display: flex;
     flex-wrap: wrap;
 }
 
-.contacts__title {
+.fitness-programs__item {
+    width: 26%;
+    position: relative;
     margin-bottom: 2em;
-    font-size: 2em;
-    font-weight: bold;
+    padding-bottom: 2em;
+    background-color: rgba(0, 0, 0, 0.2)
 }
 
-
-.contacts h2, p {
-    text-align: center;
-    margin-bottom: 0.7em;
+.fitness-programs__item__img {
+    display: inline-block;
+    margin: 0 auto;
 }
 
-.contacts__second-column {
-
-    margin-left: 5em;
+.fitness-programs__item img {
+    width: 100%;
+    height: 15em;
 }
 
-.contacts__requis {
-    margin-top: 3em;
+.fitness-programs__item__title {
+    font-size: 1.1em;
+    padding: 1em 1em;
+    color: rgb(189, 11, 11);
 }
 
-.contacts__requis h2, p{
-    text-align: left;
+.fitness-programs__item__desc {
+    font-size: 0.8em;
+    line-height: 2em;
+    padding: 1em 2em;
 }
-
 
 
 
@@ -166,64 +188,3 @@ footer {
      width: 30px;
      height: 30px;
  }  
-
- @media (min-width: 2000px) {
-
-    ul .text {
-        font-size: 25px;
-    }
-
-     .contacts__title {
-         font-size: 50px;
-     }
-
-     h2 {
-         font-size: 40px;
-     }
-
-     p {
-        font-size: 25px;
-     }
-
-     .row {
-         font-size: 20px;
-     }
- }
-
- @media (max-width: 1000px) {
-     ul .text {
-         display: none;
-     }
-
-     .row {
-         font-size: 14px;
-     }
-
-     .footer__first-row {
-         margin-left: 0em;
-     }
-
-     .contacts__second-column {
-         margin-left: 0em;
-     }
- }
-
- @media print {
-    .menu__main {
-        display: none;
-    }
-
-    img {
-        display: none;
-    }
-
-    body {
-        margin: 0;
-        color: #000;
-        background-color: #fff;
-      }
-
-    .row {
-        display: none;
-    }
- }

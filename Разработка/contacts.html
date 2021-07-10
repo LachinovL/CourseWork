@@ -3,21 +3,39 @@
         <title>
             Контакты
         </title>
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
         <link rel="stylesheet" href="CSS/contacts.css">
+        <link rel="stylesheet" href="CSS/dispmenu.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     </head>
     <body>
         <header>
             <nav class="menu">
                 <div class="menu__main">
                     <ul class="menu__main__table">
-                        <li class="logo"><a href="index.html"><img src="img/icon.png"></a></li>
+                        <li class="logo"><a href="index.php"><img src="img/icon.png"></a></li>
                         <li class="text"><a href="services.html">УСЛУГИ</a></li>
-                        <li class="text"><a href="index.html#club">КЛУБЫ</a></li>
-                        <li class="text"><a href="">РАСПИСАНИЕ</a></li>
-                        <li class="text"><a href="coaches.html">ТРЕНЕРЫ</a></li>
+                        <li class="text"><a href="index.php#club">КЛУБЫ</a></li>
+                        <li class="text"><a href="shedule.php">РАСПИСАНИЕ</a></li>
+                        <li class="text"><a href="coaches.php">ТРЕНЕРЫ</a></li>
                         <li class="text"><a href="contacts.html">КОНТАКТЫ</a></li>
                     </ul>
+                </div>
+                <div class="disp_menu" id="app">
+                <transition name="fade" mode="out-in"> 
+                    <i class="material-icons menu" v-if="!show" @click="show = !show" key="menu">menu</i>
+                    <i class="material-icons clear" v-else @click="show = !show" key="clear">clear</i>
+                </transition>
+                <transition class="fade">
+                    <ul v-if="show">
+                        <li v-for="item in items"><a href="services.html">УСЛУГИ</a></li>
+                        <li v-for="item in items"><a href="index.php#club">КЛУБЫ</a></li>
+                        <li v-for="item in items"><a href="shedule.php">РАСПИСАНИЕ</a></li>
+                        <li v-for="item in items"><a href="coaches.php">ТРЕНЕРЫ</a></li>
+                        <li v-for="item in items"><a href="contacts.html">КОНТАКТЫ</a></li>
+                    </ul>
+                </transition>
                 </div>
             </nav>
         </header>
@@ -91,4 +109,5 @@
             </div>
         </footer>
     </body>
+    <script src="JS/script.js"></script>
 </html>

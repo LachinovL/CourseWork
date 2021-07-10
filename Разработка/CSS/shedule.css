@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@100&family=Montserrat:wght@300&display=swap');
-@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 * {
     margin: 0;
     padding: 0;
@@ -13,6 +12,15 @@ ul {
 a {
     text-decoration: none;
 }
+
+
+
+td {
+    text-align: center;
+    font-size: 1.2em;
+    font-family: 'Open Sans';
+}
+
 
 /*       HEADER        */
 
@@ -48,53 +56,63 @@ a {
     text-decoration:blue underline 3px;
 }
 
+/*          MAIN         */
+
+form input {
+    margin: 0.5em 0.5em 0.5em 0.5em;
+
+}
+
+form button {
+    margin: 0.5em 0.5em 0.5em 0.5em;
+    
+}
 
 
+.modal {
+    padding: 50px;    
+     position: fixed; 
+         top: 50%;    
+          left: 50%;    
+     -webkit-transform: translate(-50%, -50%); 
+         -ms-transform: translate(-50%, -50%);  
+        transform: translate(-50%, -50%);
+    background-color: white; border: black solid 2px;
+  }
 
-.contacts {
-    padding-top: 3em;
+
+.shedule {
     font-family: 'Montserrat', sans-serif;
-    margin: 0 auto;
+    font-weight: 600;
+    padding-top: 3em;
     width: 90%;
+    margin: 0 auto;
 }
 
-.contacts__list {
+.shedule__title {
     display: flex;
-    flex-wrap: wrap;
-}
-
-.contacts__title {
-    margin-bottom: 2em;
+    justify-content: space-between;
     font-size: 2em;
-    font-weight: bold;
 }
 
-
-.contacts h2, p {
-    text-align: center;
-    margin-bottom: 0.7em;
+.shedule__list {
+    margin-top: 2em;
 }
 
-.contacts__second-column {
-
-    margin-left: 5em;
+main {
+    margin-bottom: 5em;
 }
 
-.contacts__requis {
-    margin-top: 3em;
+button img {
+    width: 30px;
+    height: 30px;
 }
 
-.contacts__requis h2, p{
-    text-align: left;
+/*         FOOTER       */
+
+input {
+    width: 100%;
 }
-
-
-
-
-/*     FOOTER       */
-
-
-
 
 footer {
     background-color: black;
@@ -166,23 +184,28 @@ footer {
      width: 30px;
      height: 30px;
  }  
+  table {
+    width: 100%;
+  }
+
 
  @media (min-width: 2000px) {
 
     ul .text {
-        font-size: 25px;
+        font-size: 30px;
     }
 
-     .contacts__title {
-         font-size: 50px;
+    .shedule__title
+     {
+         font-size: 45px;
      }
 
-     h2 {
-         font-size: 40px;
+     th {
+         font-size: 30px;
      }
 
-     p {
-        font-size: 25px;
+     tr {
+         font-size: 25px;
      }
 
      .row {
@@ -195,35 +218,31 @@ footer {
          display: none;
      }
 
+     .shedule {
+         width: 100%;
+     }
+
+     .shedule__title {
+         font-size: 20px;;
+     }
+
+     th {
+         font-size: 10px;
+     }
+
+     tr {
+         font-size: 10px;
+     }
+
+     table {
+         width: 91%;
+     }
+
      .row {
-         font-size: 14px;
+         font-size: 12px;
      }
 
      .footer__first-row {
-         margin-left: 0em;
+         margin-left: 1em;
      }
-
-     .contacts__second-column {
-         margin-left: 0em;
-     }
- }
-
- @media print {
-    .menu__main {
-        display: none;
-    }
-
-    img {
-        display: none;
-    }
-
-    body {
-        margin: 0;
-        color: #000;
-        background-color: #fff;
-      }
-
-    .row {
-        display: none;
-    }
  }

@@ -1,28 +1,54 @@
+<?php
+    require_once 'connect.php';
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Фитнес-центр</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="CSS/dispmenu.css">
+	
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
 	<header>
 		<nav class="menu">
 			<div class = "menu__main">
 				<ul class = "menu__main__table">
-					<li class="logo"><a href="index.html"><img src="img/icon.png"></a></li>
-					<li class="text"><a href="services.html">УСЛУГИ</a></li>
-					<li class="text"><a href="#club">КЛУБЫ</a></li>
-					<li class="text"><a href="">РАСПИСАНИЕ</a></li>
-					<li class="text"><a href="coaches.html">ТРЕНЕРЫ</a></li>
-					<li class="text"><a href="contacts.html">КОНТАКТЫ</a></li>
+				<li class="logo"><a href="index.php"><img src="img/icon.png"></a></li>
+				<li class="text"><a href="services.html">УСЛУГИ</a></li>
+				<li class="text"><a href="index.php#club">КЛУБЫ</a></li>
+				<li class="text"><a href="shedule.php">РАСПИСАНИЕ</a></li>
+				<li class="text"><a href="coaches.php">ТРЕНЕРЫ</a></li>
+				<li class="text"><a href="contacts.html">КОНТАКТЫ</a></li>
+				<li class="text"><a href="check.php">ЛИЧНЫЙ КАБИНЕТ</a></li>
 				</ul>	
 			</div>
+			<div class="disp_menu" id="app">
+				<transition name="fade" mode="out-in"> 
+				    <i class="material-icons menu" v-if="!show" @click="show = !show" key="menu">menu</i>
+				    <i class="material-icons clear" v-else @click="show = !show" key="clear">clear</i>
+				</transition>
+				<transition class="fade">
+				    <ul v-if="show">
+				        <li v-for="item in items"><a href="services.html">УСЛУГИ</a></li>
+				        <li v-for="item in items"><a href="index.php#club">КЛУБЫ</a></li>
+				        <li v-for="item in items"><a href="shedule.php">РАСПИСАНИЕ</a></li>
+				        <li v-for="item in items"><a href="coaches.php">ТРЕНЕРЫ</a></li>
+				        <li v-for="item in items"><a href="contacts.html">КОНТАКТЫ</a></li>
+				    </ul>
+				</transition>
+				</div>
 		</nav>
 	</header>
 	<main>
 		<div class="main">
-			<div class="main__window">
+			<div class="main__window" id="app">
+			
 				<div class = "main__window__left">
 					<img src="img/back-1.jpg">
 				</div>
@@ -31,16 +57,16 @@
 					<a href="services.html"><img src="img/main_win_right-one.jpg"></a>
 				</div>
 				<div class="main__window__right-two">
-					<p>Акции</p>
-					<img src="img/main_win_right-two.jpg"> 
+					<p>Единоборства</p>
+					<a href="singlecomb.html"><img src="img/boevisk.jpeg"></a> 
 				</div>
 				<div class="main__window__right-three">
 					<p>Тренеры</p>
-					<a href="coaches.html"><img src="img/main_win_right-three.jpg"></a>
+					<a href="coaches.php"><img src="img/main_win_right-three.jpg"></a>
 				</div>
 				<div class="main__window__right-four">
-					<p>Индивидуальные тренировки</p>
-					<img src="img/main_win_right-four.jpg">
+					<p>Расписание</p>
+					<a href="shedule.php"><img src="img/main_win_right-four.jpg"></a>
 				</div>
 			</div>
 			<div class="main__info">
@@ -56,23 +82,21 @@
 				<p>НАШИ КЛУБЫ</p>
 				</div>
 				<div class="main__club-info">
-					<div class="main__club-info__one">
-						<p>Атриум</p>
-						<p>Москва</p>
-							<p>Открыт</p>
-						<p>ул. Земляной Вал, 33, м.Курская, ТРЦ "Атриум", 3 этаж</p>
+					<div class="main__club__list">
+					<?php 
+						$clubs = mysqli_query($connect, "SELECT * FROM `clubs`");
+						$clubs = mysqli_fetch_all($clubs);
+						foreach($clubs as $club){
+					?>
+					<div class="main__club-info__item">
+						<p><?=  $club[1] ?></p>
+						<p><?= $club[2] ?></p>
+							<p><?= $club[3] ?></p>
+						<p><?=  $club[4] ?></p>
 					</div>
-					<div class="main__club-info__two">
-						<p>Атриум</p>
-						<p>Москва</p>
-							<p>Открыт</p>
-						<p>ул. Земляной Вал, 33, м.Курская, ТРЦ "Атриум", 3 этаж</p>
-					</div>
-					<div class="main__club-info__three">
-						<p>Атриум</p>
-						<p>Москва</p>
-							<p>Открыт</p>
-						<p>ул. Земляной Вал, 33, м.Курская, ТРЦ "Атриум", 3 этаж</p>
+					<?php
+						}
+					?>
 					</div>
 				</div>
 			</div>
@@ -114,4 +138,7 @@
 		</div>
 	</footer>
 </body>
+<script src="JS/index.js"></script>
+
+
 </html>

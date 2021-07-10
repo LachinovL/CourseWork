@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@100&family=Montserrat:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 * {
     margin: 0;
     padding: 0;
@@ -193,3 +194,56 @@ footer {
      width: 30px;
      height: 30px;
  }  
+
+ @media (max-width: 1000px) {
+
+    html {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    body {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    
+
+    ul .text {
+        display: none;
+    }
+
+    .coaches__title {
+        font-size: 20px;
+    }
+
+     .coaches__list__item {
+         width: 40%;
+     }
+     
+     .footer__first-row {
+         margin-left: 1em;
+     }
+
+     .coaches__list__item__desc{
+         font-size: 12px;
+     }
+
+    .coaches__list__item__name {
+        font-size: 16px;
+    }
+    }
+
+    @media (min-width: 2000px) {
+        .coaches__title {
+            font-size: 40px;
+        }
+
+        .coaches__list__item__name {
+            font-size: 25px;
+        }
+
+        .coaches__list__item__desc {
+            font-size: 22px;
+        }
+    }

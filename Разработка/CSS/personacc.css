@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@100&family=Montserrat:wght@300&display=swap');
-@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +13,9 @@ a {
     text-decoration: none;
 }
 
-/*       HEADER        */
+body {
+    background-color: rgba(0, 0, 0, 0.3);
+}
 
 .menu__main__table {
     display: flex;
@@ -48,53 +49,13 @@ a {
     text-decoration:blue underline 3px;
 }
 
-
-
-
-.contacts {
-    padding-top: 3em;
-    font-family: 'Montserrat', sans-serif;
-    margin: 0 auto;
-    width: 90%;
-}
-
-.contacts__list {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.contacts__title {
-    margin-bottom: 2em;
-    font-size: 2em;
-    font-weight: bold;
-}
-
-
-.contacts h2, p {
-    text-align: center;
-    margin-bottom: 0.7em;
-}
-
-.contacts__second-column {
-
-    margin-left: 5em;
-}
-
-.contacts__requis {
-    margin-top: 3em;
-}
-
-.contacts__requis h2, p{
-    text-align: left;
-}
+/*               MAIN               */
 
 
 
 
-/*     FOOTER       */
 
-
-
+/*      FOOTER    */
 
 footer {
     background-color: black;
@@ -165,65 +126,4 @@ footer {
      margin-left: 10px;
      width: 30px;
      height: 30px;
- }  
-
- @media (min-width: 2000px) {
-
-    ul .text {
-        font-size: 25px;
-    }
-
-     .contacts__title {
-         font-size: 50px;
-     }
-
-     h2 {
-         font-size: 40px;
-     }
-
-     p {
-        font-size: 25px;
-     }
-
-     .row {
-         font-size: 20px;
-     }
- }
-
- @media (max-width: 1000px) {
-     ul .text {
-         display: none;
-     }
-
-     .row {
-         font-size: 14px;
-     }
-
-     .footer__first-row {
-         margin-left: 0em;
-     }
-
-     .contacts__second-column {
-         margin-left: 0em;
-     }
- }
-
- @media print {
-    .menu__main {
-        display: none;
-    }
-
-    img {
-        display: none;
-    }
-
-    body {
-        margin: 0;
-        color: #000;
-        background-color: #fff;
-      }
-
-    .row {
-        display: none;
-    }
  }

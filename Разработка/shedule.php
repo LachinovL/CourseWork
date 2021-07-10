@@ -1,7 +1,9 @@
 <?php
     require_once 'connect.php';
-    ini_set('display_errors', 'off');
+    ini_set('display_errors', 0);
     error_reporting(0);
+    
+
 ?>
 
 <html>  
@@ -17,6 +19,7 @@
         <meta charset="utf-8">
     </head>
     <body>
+        <div id="app">
         <header>
             <nav class="menu">
                 <div class="menu__main">
@@ -29,7 +32,7 @@
                     <li class="text"><a href="contacts.html">КОНТАКТЫ</a></li>
                     </ul>
                 </div>
-                <div class="disp_menu" id="app">
+                <div class="disp_menu">
                     <transition name="fade" mode="out-in"> 
                         <i class="material-icons menu" v-if="!show" @click="show = !show" key="menu">menu</i>
                         <i class="material-icons clear" v-else @click="show = !show" key="clear">clear</i>
@@ -59,6 +62,8 @@
                         <tr>
                             <th width="10%">Время</th>
                         <?php 
+                        
+                        
 	                        $weekdays = mysqli_query($connect, "SELECT * FROM `weekday`");
 	                        $weekdays = mysqli_fetch_all($weekdays);
 	                        foreach($weekdays as $weekday){
@@ -203,7 +208,9 @@
                 </div>
             </div>
             <?php
-                } else {
+                } else { 
+                    
+                    
             ?>
                         <div class="shedule" id="app">
                 <div class="modal" v-if="showModal">
@@ -230,7 +237,7 @@
                 </div>
                 <div v-else>
                 </div>    
-                            <div class="modal" v-if="updateModal"> 
+                        <div class="modal" v-if="updateModal"> 
                 <form action="update.php" method="POST">
                     <input type="text" class="form-control" name="week" id="week" placeholder="Введите изменяемый id недели"><br>
                     <input type="text" class="form-control" name="time" id="time" placeholder="Введите изменяемый id времени"> <br>
@@ -444,6 +451,7 @@
                 </div>
             </div>
         </footer>
+            </div>
     </body>
     
     <script src="JS/index.js"></script>

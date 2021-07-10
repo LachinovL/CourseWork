@@ -1,5 +1,7 @@
 <?php
     require_once 'connect.php';
+    ini_set('display_errors', 'off');
+error_reporting(0);
 ?>
 
 
@@ -50,7 +52,7 @@
 			<div class="main__window" id="app">
 			
 				<div class = "main__window__left">
-					<img src="img/back-1.jpg">
+					<img src="img/back-4.jpg">
 				</div>
 				<div class="main__window__right-one">
 					<p>Услуги</p>

@@ -1,0 +1,184 @@
+<html>
+    <head>
+        <title>Единоборства</title>
+        <link rel="stylesheet" href="CSS/singlecomb.css">
+        <link rel="stylesheet" href="CSS/services.css">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="CSS/dispmenu.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        
+    </head>
+    <body>
+        <header>
+        <nav class="menu">
+            <div class = "menu__main">
+                <ul class = "menu__main__table">
+                <li class="logo"><a href="index.php"><img src="img/icon.png"></a></li>
+                <li class="text"><a href="news.php">НОВОСТИ</a></li>
+                <li class="text"><a href="services.html">УСЛУГИ</a></li>
+                <li class="text"><a href="index.php#club">КЛУБЫ</a></li>
+                <li class="text"><a href="shedule.php">РАСПИСАНИЕ</a></li>
+                <li class="text"><a href="coaches.php">ТРЕНЕРЫ</a></li>
+                <li class="text"><a href="contacts.html">КОНТАКТЫ</a></li>
+                <li class="text"><a href="check.php">ЛИЧНЫЙ КАБИНЕТ</a></li>
+                </ul>   
+            </div>
+            <div class="disp_menu" id="app">
+                <transition name="fade" mode="out-in"> 
+                    <i class="material-icons menu" v-if="!show" @click="show = !show" key="menu">menu</i>
+                    <i class="material-icons clear" v-else @click="show = !show" key="clear">clear</i>
+                </transition>
+                <transition class="fade">
+                    <ul v-if="show">
+                        <li v-for="item in items"><a href="services.html">УСЛУГИ</a></li>
+                        <li v-for="item in items"><a href="index.php#club">КЛУБЫ</a></li>
+                        <li v-for="item in items"><a href="shedule.php">РАСПИСАНИЕ</a></li>
+                        <li v-for="item in items"><a href="coaches.php">ТРЕНЕРЫ</a></li>
+                        <li v-for="item in items"><a href="contacts.html">КОНТАКТЫ</a></li>
+                    </ul>
+                </transition>
+                </div>
+        </nav>
+    </header>
+        <main>
+            <div class="services">
+            <div class="services__left">
+                <div class="fitness-programs">
+                    <div class="fitness-programs__title">
+                        Виды единоборств
+                    </div>
+                    <div class="fitness-programs__list">
+                        <div class="fitness-programs__item">
+                            <div class="fitness-programs__item__img">
+                                <img src="img/rukopash.jpeg">
+                            </div>
+                            <div class="fitness-programs__item__title">
+                                Рукопашный бой
+                            </div>
+                            <div class="fitness-programs__item__desc">
+                            <p>Рукопашный бой – это система подготовки солдат в русской армии, а так же 
+                                сотрудников полиции. Уникален тем, что с помощью, освоения техники можно 
+                                легко и быстро обезвредить соперника. Работа ведется на все тело, с 
+                                применением ударной, бросковой, болевой и удушающей техник.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="fitness-programs__item">
+                            <div class="fitness-programs__item__img">
+                                <img src="img/taiskboks.jpg">
+                            </div>
+                            <div class="fitness-programs__item__title">
+                                Тайский бокс   
+                            </div>
+                            <div class="fitness-programs__item__desc">
+                                <p>
+                                    Тайский бокс – ( Муай — Тай) — единоборство пришедшее к нам из Тайланда. 
+                                    Техника боя построена на нанесение по противнику комбинированных атак 
+                                    руками, ногами, а так же локтями и коленями. Бойцы тренируют скорость, 
+                                    реакцию, растяжку, выносливость и силу. 
+                                </p>
+                            </div>
+                        </div>
+                        <div class="fitness-programs__item">
+                            <div class="fitness-programs__item__img">
+                                <img src="img/vodnprog.jpg">
+                            </div>
+                            <div class="fitness-programs__item__title">
+                                Бокс  
+                            </div>
+                            <div class="fitness-programs__item__desc">
+                                <p>
+                                    Бокс – это один из самых популярных видов спорта в Мире. Тренировка 
+                                    начинается с разминки и общей физической подготовки и переходит в
+                                     изучение правильной стойки, передвижения, самозащите и нанесению
+                                      ударов руками. 
+
+                                </p>
+                            </div>
+                        </div>
+                        <div class="fitness-programs__item">
+                            <div class="fitness-programs__item__img">
+                                <img src="img/dzydo.jpg">
+                            </div>
+                            <div class="fitness-programs__item__title">
+                                Дзюдо  
+                            </div>
+                            <div class="fitness-programs__item__desc">
+                                <p> Дзюдо - японское боевое искусство. В отличии от ударных стилей 
+                                    единоборств, основой дзюдо являются броски, болевые приёмы, 
+                                    удержания и удушения в партере. Перед занимающимися дзюдо традиционно
+                                     ставятся цели физического воспитания, подготовки к рукопашному бою и
+                                      совершенствования сознания</p>
+                            </div>
+                        </div>
+                        <div class="fitness-programs__item">
+                            <div class="fitness-programs__item__img">
+                                <img src="img/boevisk.jpeg">
+                            </div>
+                            <div class="fitness-programs__item__title">
+                                Смешанные единоборства   
+                            </div>
+                            <div class="fitness-programs__item__desc">
+                                <p>
+                                    Смешанные боевые искусства. Здесь обучают ударной технике и борьбе.
+                                    Это наиболее универсальный вид 
+                                    боевых искусств, который очень мощно развивает выносливость, силу и
+                                    ловкость.
+                                    
+                                </p>
+                            </div>
+                        </div>
+                        <div class="fitness-programs__item">
+                            <div class="fitness-programs__item__img">
+                                <img src="img/borba.jpg">
+                            </div>
+                            <div class="fitness-programs__item__title">
+                                Вольная борьба    
+                            </div>
+                            <div class="fitness-programs__item__desc">
+                                <p>
+                                    Вольная борьба — олимпийская дисциплина, схожая с греко-римской с 
+                                    некоторыми отличиями. самыми главными отличиями является то, что здесь 
+                                    спортсмены вправе пользоваться ногами для выполнения борцовских приемов,
+                                     делать подсечки, захватывать руками ноги противника.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+        </main>
+        <footer>
+            <div class="row">
+                <div class="footer__first-row">
+                    <a><img src="img/icon.png"></a>
+                    <p>© 2021, фитнес-клуб STRONG. Все права защищены.</p>
+                </div>
+                <div class="footer__second-row">
+                    <ul>
+                        <li><a>Услуги</a></li>
+                        <li><a>Клубы</a></li>
+                        <li><a>Расписание</a></li>
+                    </ul>
+                </div>
+                <div class="footer__third-row">
+                    <ul>
+                        <li><a>Тренеры</a></li>
+                        <li><a>Акции</a></li>
+                        <li><a>Контакты</a</li>
+                    </ul>
+                </div>
+                <div class="footer__fourth-row">
+                        <a href="https://instagram.com"><img src="img/inst.jpg"></a>
+                        <a href="https://vk.com"><img src="img/vk.png"></a>
+                        <a href="https://telegram.com"><img src="img/telegram.png"></a>
+                    <div>
+                    <p>г.Москва, ул. Земляной Вал, 33, м.Курская, ТРЦ "Атриум", 3 этаж</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+    <script src="JS/script.js"></script>
+</html>

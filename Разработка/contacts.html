@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <title>
+            Контакты
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="CSS/contacts.css">
+        <link rel="stylesheet" href="CSS/dispmenu.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="menu">
+                <div class = "menu__main">
+                    <ul class = "menu__main__table">
+                    <li class="logo"><a href="index.php"><img src="img/icon.png"></a></li>
+                    <li class="text"><a href="news.php">НОВОСТИ</a></li>
+                    <li class="text"><a href="services.html">УСЛУГИ</a></li>
+                    <li class="text"><a href="index.php#club">КЛУБЫ</a></li>
+                    <li class="text"><a href="shedule.php">РАСПИСАНИЕ</a></li>
+                    <li class="text"><a href="coaches.php">ТРЕНЕРЫ</a></li>
+                    <li class="text"><a href="contacts.html">КОНТАКТЫ</a></li>
+                    <li class="text"><a href="check.php">ЛИЧНЫЙ КАБИНЕТ</a></li>
+                    </ul>   
+                </div>
+                <div class="disp_menu" id="app">
+                <transition name="fade" mode="out-in"> 
+                    <i class="material-icons menu" v-if="!show" @click="show = !show" key="menu">menu</i>
+                    <i class="material-icons clear" v-else @click="show = !show" key="clear">clear</i>
+                </transition>
+                <transition class="fade">
+                    <ul v-if="show">
+                        <li v-for="item in items"><a href="services.html">УСЛУГИ</a></li>
+                        <li v-for="item in items"><a href="index.php#club">КЛУБЫ</a></li>
+                        <li v-for="item in items"><a href="shedule.php">РАСПИСАНИЕ</a></li>
+                        <li v-for="item in items"><a href="coaches.php">ТРЕНЕРЫ</a></li>
+                        <li v-for="item in items"><a href="contacts.html">КОНТАКТЫ</a></li>
+                    </ul>
+                </transition>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="contacts">
+                <div class="contacts__title">
+                    КОНТАКТЫ
+                </div>
+                <div class="contacts__list">
+                    <div class="contacts__first-column">
+                        <div class="contacts__first-column__address">
+                            <h2>Адрес</h2>
+                            <p>г.Москва, ул. Земляной Вал, 33, м.Курская, ТРЦ "Атриум", 3 этаж</p>
+                        </div>
+                        <div class="contacts__first-column__email">
+                            <h2>E-mail</h2>
+                          <p>strongfitclub@strong.ru</p>
+                        </div>
+                    </div>
+                    <div class="contacts__second-column">
+                        <div class="contacts__second-column__admin">
+                            <h2>Администратор</h2>
+                            <p>8(9**)498-66-55</p>
+                        </div>
+                        <div class="contacts__second-column__sotr">
+                            <h2>Сотрудничество</h2>
+                            <p>l.lachinov@mail.ru</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contacts__requis">
+                    <div class="contacts__requis__title">
+                        <h2>РЕКВИЗИТЫ</h2>
+                    </div>
+                    <p>Общество с ограниченной ответственность "STRONG"</p>
+                    <p>ИНН:    74927649379</p>
+                    <p>КПП:    648974832</p>
+                    <p>ОГРН:   347286</p>
+                    <p>Юр. адрес: 115054, г. Москва, ул. Ленина, д. 71, стр. 11, офис 501</p>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="row">
+                <div class="footer__first-row">
+                    <a><img src="img/icon.png"></a>
+                    <p>© 2021, фитнес-клуб STRONG. Все права защищены.</p>
+                </div>
+                <div class="footer__second-row">
+                    <ul>
+                        <li><a>Услуги</a></li>
+                        <li><a>Клубы</a></li>
+                        <li><a>Расписание</a></li>
+                    </ul>
+                </div>
+                <div class="footer__third-row">
+                    <ul>
+                        <li><a>Тренеры</a></li>
+                        <li><a>Акции</a></li>
+                        <li><a>Контакты</a</li>
+                    </ul>
+                </div>
+                <div class="footer__fourth-row">
+                    <a href="https://instagram.com"><img src="img/inst.jpg"></a>
+                    <a href="https://vk.com"><img src="img/vk.png"></a>
+                    <a href="https://telegram.com"><img src="img/telegram.png"></a>
+                    <div>
+                        <p>г.Москва, ул. Земляной Вал, 33, м.Курская, ТРЦ "Атриум", 3 этаж</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+    <script src="JS/script.js"></script>
+</html>
